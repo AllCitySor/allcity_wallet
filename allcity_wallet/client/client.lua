@@ -14,14 +14,14 @@ local keyParam = Keys["K"]
 Citizen.CreateThread(function() 
 	while true do
 		Citizen.Wait(1000)
-		TriggerServerEvent('allcity_tab:getMoneys')
+		TriggerServerEvent('allcity_wallet:getMoneys')
 	end
 	
 end)
 
-RegisterNetEvent("allcity_tab:setValues")
+RegisterNetEvent("allcity_wallet:setValues")
 
-AddEventHandler("allcity_tab:setValues", function(wallet, bank, black_money, society)
+AddEventHandler("allcity_wallet:setValues", function(wallet, bank, black_money, society)
 
 	SendNUIMessage({
 		wallet = wallet,
